@@ -14,8 +14,8 @@ def home(request):
             "current_day": day_of_week,
             "utc_time": str(datetime.datetime.utcnow()),
             "track": request.GET.get('track','None'),
-            "github_file_url": "https://github.com/Chris-code240/HNG-Zuri-Internship/blob/master/Day%20One/Project1/app/views.py",
-            "github_repo_url": "https://github.com/Chris-code240/HNG-Zuri-Internship",
+            "github_file_url": "https://github.com/Chris-code240/Project1/blob/master/app/views.py",
+            "github_repo_url": "https://github.com/Chris-code240/Project1",
             "status_code": "200"
         }),status=status.HTTP_200_OK)
 
