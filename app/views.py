@@ -18,8 +18,6 @@ def home(request):
         current_utc_time = datetime.datetime.utcnow().replace(
             second=0, microsecond=0).isoformat() + 'Z'
 
-        current_utc_time = (datetime.datetime.strptime(current_utc_time, "%Y-%m-%dT%H:%M:%SZ") + datetime.timedelta(hours=1)).isoformat() + 'Z'
-
         # Define GitHub repository information
         github_repo_url = 'https://github.com/Chris-code240/Project1'
         github_file_url = f'{github_repo_url}/blob/main/file_name.ext'
