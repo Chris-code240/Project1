@@ -10,9 +10,9 @@ def home(request):
     
     current_datetime = datetime.datetime.now()
     day_of_week = current_datetime.strftime('%A')
-    return HttpResponse(content=json.dumps({ "slack_name": request.GET.get('slack_name','None'),
+    return HttpResponse(json.dumps({ "slack_name": request.GET.get('slack_name','None'),
             "current_day": day_of_week,
-            "utc_time": str(datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")),
+            "utc_time": str(datetime.datetime.utcnow()),
             "track": request.GET.get('track','None'),
             "github_file_url": "https://github.com/Chris-code240/Project1/blob/master/app/views.py",
             "github_repo_url": "https://github.com/Chris-code240/Project1",
